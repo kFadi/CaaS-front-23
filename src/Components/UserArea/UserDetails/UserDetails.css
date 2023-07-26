@@ -1,0 +1,94 @@
+.UserDetails {}
+
+
+.ud-header {
+    position: relative;
+    margin-top: 20px;
+    color: var(--clr-drk);
+}
+
+.ud-h-show {
+    position: absolute;
+    left: 40px;
+}
+.ud-h-hide {
+    opacity: 0;
+}
+
+.ud {
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+    padding-top: 30px;
+    padding-bottom: 60px;
+    gap: 30px; /*btw lines*/
+    padding-inline: 60px;
+
+    border-radius: 2rem;
+    box-shadow: var(--shd);
+
+    background-color: var(--clr-drk);
+
+    letter-spacing: 2px;
+
+    /* transition: opacity 1s cubic-bezier(0.4,0,0.2,1); */
+}
+.ud-hide {
+    opacity: 0;
+}
+
+
+.ud-line {
+    gap: 40px;;
+}
+
+.ud-footer {
+    
+    width:100%;
+    gap: 15px;
+    
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    background: none;
+    color: var(--clr-wht-pure);
+    border: 1.5px solid var(--clr-orng);
+
+}
+
+.ud-line-no {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.ud-field {
+
+    gap: 10px;
+
+    padding: 1rem;
+    /* font-size: 1rem; */
+    border-radius: 1rem;
+    background: none;
+    color: var(--clr-wht-pure);
+    border: 1.5px solid var(--clr-wht-dimmer);
+    
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.ud-field-hidden:hover {
+    cursor:help;
+    border: 1.5px solid var(--clr-blu-light);
+}
+
+
+.ud-label {
+    font-weight: 700;
+}
+
+.ud-value {
+    color: var(--clr-blu-lighter);
+
+}
+

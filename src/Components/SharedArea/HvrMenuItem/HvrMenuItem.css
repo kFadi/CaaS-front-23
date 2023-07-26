@@ -1,0 +1,130 @@
+.HvrMenuItem {
+
+    --hvrmi-clr: var(--clr-wht);
+    --hvrmi-hvr-clr: var(--clr-blu-light);
+
+    --hvrmi-brdr-clr: var(--clr-wht);   /*initially transparent*/
+    --hvrmi-hvr-brdr-clr: var(--clr-orng);
+
+    --hvrmi-bg-clr: var(--clr-drk);     /*initially transparent*/
+    --hvrmi-hvr-bg-clr: transparent;
+
+    /* >>>>>>>>>  needed for offsetting!! */
+    --hvrmi-brdr-size: 4px;  
+    --hvrmi-small-brdr-size: 2px;
+}
+
+/* * * * */
+/* * * * */
+
+.hvrmi, .hvrmi-inactive, .hvrmi-small, .hvrmi-small-inactive {
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .5s;
+    
+    z-index: 1;
+}
+
+.hvrmi, .hvrmi-inactive {
+
+    /* margin: 20px 0; */
+
+    padding:5px 10px;        
+}
+
+.hvrmi-small, .hvrmi-small-inactive {
+
+    /* margin: 10px 0; */
+    
+    padding:2px 4px;
+}
+
+/* * * * */
+/* * * * */
+
+.hvrmi:before, .hvrmi-small:before {
+    
+    content: '';
+    
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    transform: scaleY(2);
+    transition: .3s;
+
+    opacity: 0;
+}
+
+.hvrmi:before {
+
+    top: calc(-1 * var(--hvrmi-brdr-size));
+    
+    border-top: var(--hvrmi-brdr-size) solid var(--hvrmi-brdr-clr);
+    border-bottom: var(--hvrmi-brdr-size) solid var(--hvrmi-brdr-clr);
+}
+
+.hvrmi-small:before {
+    top: calc(-1 * var(--hvrmi-small-brdr-size));
+    
+    border-top: var(--hvrmi-small-brdr-size) solid var(--hvrmi-brdr-clr);
+    border-bottom: var(--hvrmi-small-brdr-size) solid var(--hvrmi-brdr-clr);
+}
+
+/* * * * */
+/* * * * */
+
+.hvrmi:after, .hvrmi-small:after{
+    content: '';
+    
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-color: var(--hvrmi-bg-clr);
+    
+    transform: scale(0);
+    transition: .3s;
+    
+    z-index: -1;
+
+    opacity: 0;
+}
+
+.hvrmi:after{
+    top: 2px;
+}
+
+.hvrmi-small:after{ 
+    top: 1px;
+}
+
+/* * * * */
+/* * * * */
+
+.hvrmi:hover, .hvrmi-small:hover {
+    color: var(--hvrmi-hvr-clr);
+    transform: scale(1.05);
+    color: var(--hvrmi-hvr-clr);
+}
+
+.hvrmi:hover:before, .hvrmi-small:hover:before {
+    border-color: var(--hvrmi-hvr-brdr-clr);
+    transform: scaleY(1);
+    opacity: 1;  
+}
+
+.hvrmi:hover:after, .hvrmi-small:hover:after {
+    background-color: var(--hvrmi-hvr-bg-clr);
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+/* * * * */
+/* * * * */

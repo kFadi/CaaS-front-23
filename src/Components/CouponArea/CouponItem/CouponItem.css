@@ -1,0 +1,259 @@
+.CouponItem {
+
+    --item-card-w: var(--item-width);
+    --item-card-h: var(--item-height);
+
+    --item-brdr-radius: 50px;
+    
+    --item-card-hvr-brdr: 3px solid var(--clr-orng);
+    --item-card-hvr-outline: 3px solid var(--clr-blu);
+    --item-card-hvr-outline-offset: 3px;
+
+    --item-card-bg: linear-gradient(to right, #bdf3ff, #f3da77);
+    
+    --clr-wht: #f2f2f2;
+    --clr-wht-dim: #c1bbbb;
+    --clr-drk: #282936;
+    --clr-orng: #ffb833;
+    --clr-orng-dim: #ffb833dd;
+    --clr-blu: #00b3ff;
+    --clr-other: #6f7296;
+    
+}
+
+/* ##################################################### */
+
+.item-card {
+    
+    display: inline-flex;
+
+    justify-content: center;
+
+    position: relative;    
+    width: var(--item-card-w);
+    min-width: var(--item-card-w);
+    height: var(--item-card-h);
+    
+    border-radius: var(--item-brdr-radius);
+    overflow: hidden;
+    
+    box-shadow: var(--shd);
+
+    margin: 30px;
+
+}
+
+.item-card:hover {
+    border: var(--item-card-hvr-brdr);
+    outline: var(--item-card-hvr-outline);
+    outline-offset: var(--item-card-hvr-outline-offset);
+
+    padding: 5px; /* ---------- results in zoom? ---------- */
+
+    box-shadow: var(--shd-hvy);
+    
+    transition: all .3s cubic-bezier(0.68, -0.65, 0.265, 1.8);
+    transition: all .25s cubic-bezier(.25, .46, .45, 1), border-color 0.5s;
+}
+
+/* .item-card:hover .CouponItem {
+    margin: 3px; 
+} */
+
+/* ##################################################### */
+
+.item-card-img {
+    position: absolute;
+    top: -5px;
+    /* top: -30px; */
+    height: 65%;
+    /* width: 100%; */
+}
+
+.item-card-bg {
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 112%;
+    height: 70%;
+    
+    transform: skew(19deg, -9deg);
+    border-radius: var(--item-brdr-radius);
+
+    background: var(--item-card-bg);    
+}
+
+/* ##################################################### */
+
+.item-card-btns {
+    position: absolute;
+    left: 7px;
+    top: 48%;
+    width: 80px;
+    height: 40px;
+
+    border-radius: 20px;
+    /* overflow: hidden; */
+
+    background-color: var(--clr-drk-tr);
+
+    box-shadow: var(--shd);
+}
+.item-card-btns-sm {
+    width: 60px;
+    color: var(--clr-wht);
+}
+.item-card-btns-no {
+    width:0;
+    height:0;
+    visibility: hidden;
+}
+
+/* ##################################################### */
+
+.item-card-category {
+    position: absolute;
+    right: 30px;
+    top: 49%;
+
+    color: var(--clr-other);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: lowercase;
+    letter-spacing: 0.1em;
+}
+
+.item-card-title {
+    position: absolute;
+    top: 55%;
+
+    color: var(--clr-drk);
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.item-card-description {
+    position: absolute;
+    top: 74%;
+    max-width: 75%;
+    max-height: 17%;
+    /* margin: 25px; */
+
+    color: var(--item-card-description-clr);
+    font-size: 20px;
+    font-weight: 600;  
+
+    text-align: center;
+}
+
+/* ##################################################### */
+
+.item-card-bordered {
+    position: absolute;
+
+    border-radius: 12px;
+    /* overflow: hidden; */
+
+    gap: 20px;
+
+    background-color: transparent;
+
+    color: var(--clr-drk);
+
+    letter-spacing: 0.05em;   
+}
+
+.item-card-price-amount {
+
+    top: 64%;
+    width: 90%;
+    height: 35px;
+
+    font-size: 20px;
+    font-weight: 650;
+
+    /* box-shadow: var(--shd); */
+    border: 1.5px dashed var(--clr-blu);
+}
+
+
+.item-card-dates {
+
+    bottom: 20px;
+    width: 90%;
+    height: 45px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    box-shadow: var(--shd);
+    /* border: 2px dashed var(--clr-blu); */
+}
+
+/* ##################################################### */
+
+.count-left{
+    height:100%;
+    
+    padding-left: 20px;
+    gap: 15px;
+    /* border-left: 2px dotted var(--clr-drk-tr); */
+
+}
+.count-left-0{
+    color: var(--clr-red);
+    border-radius: 50%;
+    
+}
+.count-left-1{
+    background-color: var(--clr-red);
+    border-radius: 50%;
+    padding: 2px;
+    padding-top: 0px; /* ~~ */
+}
+.count-left-2-3{
+    background-color: var(--clr-orng);
+    border-radius: 50%;
+    padding: 2px;
+    padding-top: 0px; /* ~~ */
+}
+
+.count-left-text{
+    color: var(--clr-drk-tr);
+    font-size: 15px;
+    font-weight: 600;
+    /* padding: 3px; */
+}
+
+/* ##################################################### */
+
+.amount-left {
+
+    border-left: 1.5px dashed var(--clr-blu);
+}
+
+.dates-text1{
+    color: var(--clr-drk-tr);
+    padding-right: 5px;
+}
+
+.dates-text2{
+    font-size: 16px;
+}
+
+.days-left {
+
+    font-size: 20px;
+    font-weight: 650;
+    border-left: 2px dotted var(--clr-drk-tr);
+}
+
+.days-left-0 {
+    font-size: 15px;
+    
+    margin: -10px;
+}
+
+/* ##################################################### */

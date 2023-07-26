@@ -1,0 +1,122 @@
+.BtnSlide {
+
+    --btn-slide-clr-bg: var(--clr-drk);
+    --btn-slide-clr: var(--clr-wht-pure);
+    
+}
+
+/* - - - */
+
+.btn-slide {
+    
+    cursor: pointer;
+
+    /**/
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    /**/
+    /* display: inline-block; */
+
+    position: relative;
+    width: 13.5rem;
+    height: auto;
+    
+    padding: 0;
+    border: 0;
+
+    vertical-align: middle;
+    
+    background: transparent;
+}
+
+.btn-slide-crcl {
+    
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+
+    display: block;
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+
+    margin: 0;
+    border-radius: 1.625rem;
+
+    background: var(--btn-slide-clr-bg);
+    color: var(--btn-slide-clr);
+}
+
+.btn-slide-crcl .btn-slide-icn1 {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+
+    position: absolute;
+    top: 0.15em;
+    /* bottom: 0; */
+    left: 0.2em;
+    /* margin: auto; */
+    margin: 0;
+    /* background: #fff; */
+    color: var(--btn-slide-clr);
+}
+
+.btn-slide-crcl .btn-slide-icn2 {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    
+    position: absolute;
+    top: 0.1em;
+    /* bottom: 0; */
+    left: 0.2em;
+    /* margin: auto; */
+    margin: 0;
+    /* background: #fff; */
+    color: transparent;
+}
+
+.btn-slide-txt {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+
+    position: absolute;
+    top: 0.1em;
+    left: -1em;
+    right: 0;
+    bottom: 0;
+
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+
+    color: var(--btn-slide-clr-bg);
+
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* - - - */
+
+.btn-slide:hover .btn-slide-crcl {
+    width: 100%;
+}
+
+.btn-slide:hover .btn-slide-crcl .btn-slide-icn1 {
+    transform: translate(1em, 0) scale(0.75) rotate(0.25turn);
+    color: transparent;
+}
+
+.btn-slide:hover .btn-slide-crcl .btn-slide-icn2 {
+    transform: translate(1em, 0) rotate(0.25turn);;
+    color: var(--btn-slide-clr);
+}
+
+.btn-slide:hover .btn-slide-txt {
+    transform: translate(1.5em, 0) scale(1.1);
+    color: var(--btn-slide-clr);
+
+}
+
+.btn-slide:active .btn-slide-crcl {
+    transition: all 0s cubic-bezier(0.65, 0, 0.076, 1);
+    opacity: 0.75;
+    top: 1px;
+    right: 1px;
+}
