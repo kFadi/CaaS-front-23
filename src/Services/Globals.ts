@@ -3,10 +3,10 @@ class Globals{
 
 class DevelopmentGlobals extends Globals{
     public urls = {
-        welcome: "https://couponinja-723-be.oa.r.appspot.com/api/welcome",
-        admin: "https://couponinja-723-be.oa.r.appspot.com/api/admin",
-        companies: "https://couponinja-723-be.oa.r.appspot.com/api/companies",
-        customers: "https://couponinja-723-be.oa.r.appspot.com/api/customers"  
+        welcome: "http://localhost:8080/api/welcome",
+        admin: "http://localhost:8080/api/admin",
+        companies: "http://localhost:8080/api/companies",
+        customers: "http://localhost:8080/api/customers"  
     }
 }
 
