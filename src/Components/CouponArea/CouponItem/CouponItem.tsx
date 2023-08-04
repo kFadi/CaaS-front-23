@@ -117,8 +117,9 @@ function CouponItem(props: CouponItemProps): JSX.Element {
         const dt = new Date (props.coupon.endDate);
         dt.setHours(0,0,0,0);
         const d2 = dt.getTime();
+        // console.log(">>> days left >>>",Math.round((d2-d1)/(1000*60*60*24)));
     
-        return ((d2-d1)/(1000*60*60*24));
+        return Math.round((d2-d1)/(1000*60*60*24));
     }
     
     //--------------------------------------------------
